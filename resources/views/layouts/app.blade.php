@@ -17,8 +17,8 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!--Swiper slider css-->
-{{-- <link href="{{ URL::asset('build/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css" /> --}}
-    <!-- Scripts -->
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
 </head>

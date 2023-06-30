@@ -2,39 +2,36 @@
 
 
 @section('content')
-    <!-- Main Section starts here  -->
-    <section class="main__container d-flex flex-column align-items-center text-center">
-        <figure class="main__image__content">
+    <!-- download Section starts here  -->
+    <section class="download__container d-flex flex-column align-items-center text-center">
+        <figure class="download__image__content">
             <img src="images/logo.svg" alt="Logo image" width="125" height="125" loading="lazy">
         </figure>
 
-        <article class="main__text__content col-md-8 col-lg-8 col-xxl-6 d-flex flex-column align-items-center">
-            <h1 class="main__title">A history of everything you copy</h1>
-            <p class="main__description">Clipboard allows you to track and organize everything you copy. Instantly access
+        <article class="download__text__content col-md-8 col-lg-8 col-xxl-6 d-flex flex-column align-items-center">
+            <h1 class="download__title">A history of everything you copy</h1>
+            <p class="download__description">Clipboard allows you to track and organize everything you copy. Instantly access
                 your
                 clipboard on all your
                 devices.</p>
-            <div class="main__buttons d-flex flex-wrap justify-content-center gap-4">
+            <div class="download__buttons d-flex flex-wrap justify-content-center gap-4">
                 <button>Download for IOS</button>
                 <button>Download for Mac</button>
             </div>
         </article>
+    </section>
 
-        <article class="main__text__content col-md-8 col-lg-8 col-xxl-6 d-flex flex-column align-items-center">
+
+    <!-- Hero Section starts here  -->
+    <section class="hero__container row justify-content-center px-0">
+        <article class="hero__text__content col-md-8 col-xxl-6 d-flex flex-column text-center mb-4">
             <h2>Keep track of your snippets</h2>
             <p>Clipboard instantly stores any item you copy in the cloud,
                 meaning you can access your snippets immediately on all your
                 devices. Our Mac and iOS apps will help you organize everything.
             </p>
         </article>
-
-    </section>
-
-
-    <!-- Hero Section starts here  -->
-    <section class="hero__container row px-0">
-
-        <div class="hero__content d-flex">
+        <div class="hero__content d-flex pt-4">
 
             <figure class="hero__image__content col-xxl-6">
                 <img src="images/image-computer.webp" alt="Computer Image" width="752" height="572" loading="lazy">
@@ -42,15 +39,15 @@
 
             <div class="hero__text__content d-flex flex-column col-xxl-4">
                 <div class="hero__text-item">
-                    <h2>Quick Search</h2>
+                    <h3>Quick Search</h3>
                     <p>Easily search your snippets by content, category, web address, application, and more.</p>
                 </div>
                 <div class="hero__text-item">
-                    <h2>iCloud Sync</h2>
+                    <h3>iCloud Sync</h3>
                     <p>Instantly saves and syncs snippets across all your devices.</p>
                 </div>
                 <div class="hero__text-item">
-                    <h2>Complete History</h2>
+                    <h3>Complete History</h3>
                     <p>Retrieve any snippets from the first moment you started using the app.</p>
                 </div>
             </div>
@@ -60,7 +57,7 @@
     </section>
 
     <section class="access__container d-flex flex-column align-items-center text-center">
-        <article class="access__text__content col-md-8 col-lg-8 col-xxl-6 d-flex flex-column align-items-center">
+        <article class="access__text__content row col-md-8 col-lg-8 col-xxl-6 justify-content-center gap-2">
             <h2>Access Clipboard anywhere</h2>
             <p>Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple
                 clicks.</p>
@@ -104,23 +101,8 @@
     </section>
 
     <section class="clients__container">
-        {{-- <div class="clients__content clients__slider">
-            <div class="clients__brands swiper-wrapper">
-
-
-                <div class="swiper-slide">
-                </div>
-
-                <div class="swiper-slide">
-                </div>
-
-                <div class="swiper-slide">
-                </div>
-            </div>
-        </div> --}}
-
-        <!-- Slider main container -->
-        <div class="swiper">
+        <!-- Slider download container -->
+        <div class="swiper clients__swiper">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -146,6 +128,48 @@
             </div>
         </div>
     </section>
+
+    <section class="download__container d-flex flex-column align-items-center text-center">
+        <article class="download__text__content col-md-8 col-lg-8 col-xxl-6 d-flex flex-column align-items-center">
+            <h2 class="download__title">Clipboard for iOS and Mac OS</h2>
+            <p class="download__description">Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+                and you’re ready to start adding to your clipboard.</p>
+            <div class="download__buttons d-flex flex-wrap justify-content-center gap-4">
+                <button>Download for IOS</button>
+                <button>Download for Mac</button>
+            </div>
+        </article>
+    </section>
+
+    <footer class="footer__container d-flex justify-content-between align-items-center col-xxl-8">
+        <div class="logo__section d-flex justify-content-center">
+            <figure>
+                <img src="images/logo.svg" alt="Company Logo">
+            </figure>
+        </div>
+
+        <div class="menu__section d-flex gap-5">
+            <ul class="menu__items">
+                <li class="menu__item"><a href="#">FAQs</a></li>
+                <li class="menu__item"><a href="#">Contact Us</a></li>
+            </ul>
+            <ul class="menu__items">
+                <li class="menu__item"><a href="#">Privacy Policy</a></li>
+                <li class="menu__item"><a href="#">Press kit</a></li>
+            </ul>
+            <ul class="menu__items">
+                <li class="menu__item"><a href="#">Install Guide</a></li>
+            </ul>
+        </div>
+
+        <div class="social__container">
+            <ul class="social__items d-flex justify-content-between">
+                <li class="social__item"><a href="#"><i class="social__icon" data-icon="icon-facebook"></i></a></li>
+                <li class="social__item"><a href="#"><i class="social__icon" data-icon="icon-twitter"></i></a></li>
+                <li class="social__item"><a href="#"><i class="social__icon" data-icon="icon-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 @endsection
 
 @section('footer')

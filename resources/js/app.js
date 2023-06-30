@@ -11,13 +11,13 @@ import Swiper from 'swiper/bundle';
 
 const swiper = new Swiper('.swiper', {
     // Optional parameters
-    direction: 'horizontal',
     loop: true,
     autoplay: {
-        delay: 2000,
-    },
-    speed: 400,
-    spaceBetween: 30,
+        delay: 2500,
+        disableOnInteraction: false,
+        reverseDirection: true,
+     },
+    spaceBetween: 50,
     autoHeight: true,
     slidesPerView: 4,
   });

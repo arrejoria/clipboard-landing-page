@@ -1,6 +1,6 @@
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
-@import 'swiper/css/bundle';
+@import "swiper/css/bundle";
 // ## Layout
 // The designs were created to the following widths:
 
@@ -20,15 +20,20 @@
 
 // ## App Styles start from here
 
-* {
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
 }
 
 body {
     background-image: url("../../public/images/bg-header-desktop.webp");
     background-repeat: no-repeat;
+    background-size: contain;
     color: $dark-grayish-blue;
     font-size: $font-size;
     font-family: $font-family-baiJamjuree;
@@ -39,7 +44,7 @@ p {
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     padding-top: 30px;
 }
 
@@ -48,21 +53,20 @@ h2,
 h3 {
     font-weight: $weight-secondary;
 }
-//### Main Section Styles
+//### Download Section Styles
 
-.main__container {
-    article:nth-of-type(1){
-            margin-bottom: 100px;
-        }
-    .main__text__content {
-
-        .main__title {
+.download__container {
+    article:nth-of-type(1) {
+        margin-bottom: 100px;
+    }
+    .download__text__content {
+        .download__title {
             font-weight: $weight-secondary;
         }
-        .main__description {
+        .download__description {
             padding: 1rem 2.4rem;
         }
-        .main__buttons {
+        .download__buttons {
             button {
                 border: none;
                 border-bottom: 3px solid rgba(0, 0, 0, 0.2);
@@ -124,6 +128,7 @@ h3 {
 //### Workflow Section Styles
 .workflow__container {
     gap: 5rem;
+    margin-bottom: 100px;
     .workflow__text__content {
         gap: 1rem;
     }
@@ -152,47 +157,71 @@ h3 {
 }
 
 //### Clients Section Styles
-.brands__container {
-    *, :after, :before {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-      }
-      img {
-        max-width: 100%;
-        vertical-align: middle;
-        height: auto;
-      }
-      .swiper {
-        width: 100%;
-      /*   height: 100%; */
-      }
 
-
-      
-}
 .clients__container {
-    // width: 1200px;
-    // overflow: hidden;
+    margin-bottom: 100px;
+
+    .clients__swiper {
+        .swiper-slide {
+            align-self: center;
+            text-align: center;
+        }
+    }
     .swiper {
         width: 80vw;
         height: 100px;
-      }
-    .clients__content {
-        .clients__brands {
-            .swiper-slide {
-                height: auto;
-                width: 100%;
-              }
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//### Footer Section Styles
+
+.footer__container {
+    .menu__items {
+        .menu__item {
+            a {
+                color: $dark-grayish-blue;
+                text-decoration: none;
+            }
         }
     }
-  }
-  
-  
+    .social__container {
+        background-color: $dark-grayish-blue;
+        .social__items {
+            .social__item {
+                .social__icon {
+                    &::before {
+                        content: "";
+                        display: block;
+                        background-repeat: no-repeat;
+                        width: 24px;
+                        height: 24px;
+                        margin: 0.2rem;
+
+                    }
+                }
+                .social__icon[data-icon="icon-facebook"]::before {
+                    background-image: url('/public/images/icon-facebook.svg');
+                }
+
+                .social__icon[data-icon="icon-twitter"]::before {
+                    background-image: url('/public/images/icon-twitter.svg');
+                }
+
+                .social__icon[data-icon="icon-instagram"]::before {
+                    background-image: url('/public/images/icon-instagram.svg');
+                }
+            }
+        }
+    }
+}
+
 // Media Queries
 
 @media (min-width: 1440px) {
-    // // main Section
-    // .main__image__content {
+    // // download Section
+    // .download__image__content {
     //     img {
     //         max-width: 10rem;
     //     }
