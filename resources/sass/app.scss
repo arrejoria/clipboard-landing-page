@@ -45,7 +45,7 @@ p {
 
 section {
     margin-bottom: 70px;
-    padding-top: 30px;
+    padding-top: 100px;
 }
 
 h1,
@@ -56,9 +56,8 @@ h3 {
 //### Download Section Styles
 
 .download__container {
-    article:nth-of-type(1) {
-        margin-bottom: 100px;
-    }
+    gap: 2.5rem;
+
     .download__text__content {
         .download__title {
             font-weight: $weight-secondary;
@@ -91,8 +90,9 @@ h3 {
 //### Hero Section Styles
 
 .hero__container {
+    gap: 1.5rem;
     .hero__content {
-        gap: 100px;
+        gap: 4rem;
         .hero__image__content {
             img {
                 object-fit: contain;
@@ -131,26 +131,32 @@ h3 {
     margin-bottom: 100px;
     .workflow__text__content {
         gap: 1rem;
+        h2{
+        font-size: 2.4rem;
+        }
     }
 
     .workflow__items {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        // width: 100%;
         .workflow__item {
-            display: grid;
-            grid-template-rows: 80px 50px 1fr;
-            padding: 0 20px;
-            text-align: center;
-            width: 100%;
-            max-width: 400px;
-            max-height: 200px;
-            .workflow__item-image {
-                width: 100%;
-                max-height: 50px;
-            }
+        padding: 0 2rem;
+            // display: grid;
+            // grid-template-rows: 80px 50px 1fr;
+            // padding: 0 20px;
+            // text-align: center;
+            // width: 100%;
+            // max-width: 400px;
+            // max-height: 200px;
+
             h3 {
                 font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 2;
             }
         }
     }
@@ -178,39 +184,65 @@ h3 {
 //### Footer Section Styles
 
 .footer__container {
-    .menu__items {
-        .menu__item {
-            a {
-                color: $dark-grayish-blue;
-                text-decoration: none;
-            }
-        }
-    }
-    .social__container {
-        background-color: $dark-grayish-blue;
-        .social__items {
-            .social__item {
-                .social__icon {
-                    &::before {
-                        content: "";
-                        display: block;
-                        background-repeat: no-repeat;
-                        width: 24px;
-                        height: 24px;
-                        margin: 0.2rem;
+    background-color: $footer-bg;
+    padding: 2.5rem 0;
+    width: 100%;
+    height: auto;
 
+    .footer__content {
+        margin: 0 auto;
+        width: 100%;
+        // max-width: 80vw;
+
+        display: flex;
+
+        .logo__section {
+            // flex: 2.5 1 3.8rem;
+        }
+        .menu__section {
+            // flex: 5 0 27rem;
+            gap: 3rem;
+            .menu__items {
+                .menu__item {
+                    margin-bottom: 1rem;
+
+                    a {
+                        color: $dark-grayish-blue;
+                        text-decoration: none;
                     }
                 }
-                .social__icon[data-icon="icon-facebook"]::before {
-                    background-image: url('/public/images/icon-facebook.svg');
-                }
+            }
+        }
 
-                .social__icon[data-icon="icon-twitter"]::before {
-                    background-image: url('/public/images/icon-twitter.svg');
-                }
+        .social__section {
+            // flex: 1 1 11rem;
+            .social__items {
+                .social__item {
+                    .social__icon {
+                        &:is(:hover){
 
-                .social__icon[data-icon="icon-instagram"]::before {
-                    background-image: url('/public/images/icon-instagram.svg');
+                        }
+                        &::before {
+                            content: "";
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            margin: 0.2rem;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                    .social__icon[data-icon="icon-facebook"]::before {
+                        background-image: url("/public/images/icon-facebook.svg");
+                    }
+
+                    .social__icon[data-icon="icon-twitter"]::before {
+                        background-image: url("/public/images/icon-twitter.svg");
+                    }
+
+                    .social__icon[data-icon="icon-instagram"]::before {
+                        background-image: url("/public/images/icon-instagram.svg");
+                    }
                 }
             }
         }

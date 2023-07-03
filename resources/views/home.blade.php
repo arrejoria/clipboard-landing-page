@@ -24,7 +24,7 @@
 
     <!-- Hero Section starts here  -->
     <section class="hero__container row justify-content-center px-0">
-        <article class="hero__text__content col-md-8 col-xxl-6 d-flex flex-column text-center mb-4">
+        <article class="hero__text__content col-md-8 col-xxl-6 d-flex flex-column text-center">
             <h2>Keep track of your snippets</h2>
             <p>Clipboard instantly stores any item you copy in the cloud,
                 meaning you can access your snippets immediately on all your
@@ -33,8 +33,8 @@
         </article>
         <div class="hero__content d-flex pt-4">
 
-            <figure class="hero__image__content col-xxl-6">
-                <img src="images/image-computer.webp" alt="Computer Image" width="752" height="572" loading="lazy">
+            <figure class="hero__image__content figure col-xxl-6">
+                <img src="images/image-computer.webp" alt="Computer Image" width="752" height="572" loading="lazy" class="figure-img img-fluid">
             </figure>
 
             <div class="hero__text__content d-flex flex-column col-xxl-4">
@@ -67,32 +67,32 @@
         </figure>
     </section>
 
-    <section class="workflow__container row justify-content-center text-center">
-        <article class="workflow__text__contentd-flex flex-column align-items-center">
+    <section class="workflow__container row col-xxl-12 justify-content-center text-center">
+        <article class="workflow__text__content row">
             <h2>Supercharge your workflow</h2>
             <p>We’ve got the tools to boost your productivity.</p>
         </article>
 
-        <div class="workflow__items d-flex justify-content-center text-center">
-            <div class="workflow__item">
-                <figure class="workflow__item-image">
-                    <img src="images/icon-blacklist.svg" alt="" width="50" loading="lazy">
+        <div class="workflow__items row col-xxl-10 align-items-baseline">
+            <div class="workflow__item col-xxl-4 d-flex flex-column gap-3">
+                <figure class="workflow__item-image figure my-4">
+                    <img src="images/icon-blacklist.svg" alt="" width="40" loading="lazy" class="figure-img img-fluid">
                 </figure>
                 <h3>Create blacklists</h3>
                 <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
             </div>
 
-            <div class="workflow__item">
-                <figure class="workflow__item-image">
-                    <img src="images/icon-text.svg" alt="" width="40" loading="lazy">
+            <div class="workflow__item col-xxl-4 d-flex flex-column gap-3 ">
+                <figure class="workflow__item-image figure my-4">
+                    <img src="images/icon-text.svg" alt="" width="40" loading="lazy" class="figure-img img-fluid">
                 </figure>
                 <h3>Plain text snippets</h3>
                 <p>Remove unwanted formatting from copied text for a consistent look.</p>
             </div>
 
-            <div class="workflow__item">
-                <figure class="workflow__item-image">
-                    <img src="images/icon-preview.svg" alt="" width="50" loading="lazy">
+            <div class="workflow__item col-xxl-4 d-flex flex-column gap-3 ">
+                <figure class="workflow__item-image figure my-4">
+                    <img src="images/icon-preview.svg" alt="" width="40" loading="lazy" class="figure-img img-fluid">
                 </figure>
                 <h3>Sneak preview</h3>
                 <p>Quick preview of all snippets on your Clipboard for easy access.</p>
@@ -132,7 +132,7 @@
     <section class="download__container d-flex flex-column align-items-center text-center">
         <article class="download__text__content col-md-8 col-lg-8 col-xxl-6 d-flex flex-column align-items-center">
             <h2 class="download__title">Clipboard for iOS and Mac OS</h2>
-            <p class="download__description">Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
+            <p class="download__description">Available for free on the App Store. Download for Mac or iOS, sync with iCloud
                 and you’re ready to start adding to your clipboard.</p>
             <div class="download__buttons d-flex flex-wrap justify-content-center gap-4">
                 <button>Download for IOS</button>
@@ -141,33 +141,38 @@
         </article>
     </section>
 
-    <footer class="footer__container d-flex justify-content-between align-items-center col-xxl-8">
-        <div class="logo__section d-flex justify-content-center">
-            <figure>
-                <img src="images/logo.svg" alt="Company Logo">
-            </figure>
-        </div>
+    <footer class="footer__container">
+        <div class="footer__content row align-items-center col-xxl-10">
+            <div class="logo__section col-xxl-3 text-center">
+                <figure>
+                    <img src="images/logo.svg" alt="Company Logo" width="60" height="60">
+                </figure>
+            </div>
 
-        <div class="menu__section d-flex gap-5">
-            <ul class="menu__items">
-                <li class="menu__item"><a href="#">FAQs</a></li>
-                <li class="menu__item"><a href="#">Contact Us</a></li>
-            </ul>
-            <ul class="menu__items">
-                <li class="menu__item"><a href="#">Privacy Policy</a></li>
-                <li class="menu__item"><a href="#">Press kit</a></li>
-            </ul>
-            <ul class="menu__items">
-                <li class="menu__item"><a href="#">Install Guide</a></li>
-            </ul>
-        </div>
+            <div class="menu__section row col-xxl-6 d-flex ">
+                <ul class="menu__items">
+                    <li class="menu__item"><a href="#">FAQs</a></li>
+                    <li class="menu__item"><a href="#">Contact Us</a></li>
+                </ul>
+                <ul class="menu__items">
+                    <li class="menu__item"><a href="#">Privacy Policy</a></li>
+                    <li class="menu__item"><a href="#">Press kit</a></li>
+                </ul>
+                <ul class="menu__items">
+                    <li class="menu__item"><a href="#">Install Guide</a></li>
+                </ul>
+            </div>
 
-        <div class="social__container">
-            <ul class="social__items d-flex justify-content-between">
-                <li class="social__item"><a href="#"><i class="social__icon" data-icon="icon-facebook"></i></a></li>
-                <li class="social__item"><a href="#"><i class="social__icon" data-icon="icon-twitter"></i></a></li>
-                <li class="social__item"><a href="#"><i class="social__icon" data-icon="icon-instagram"></i></a></li>
-            </ul>
+            <div class="social__section col-xxl-3 text-center">
+                <ul class="social__items d-flex gap-3">
+                    <li class="social__item"><a href="#"><i class="social__icon"
+                                data-icon="icon-facebook"></i></a></li>
+                    <li class="social__item"><a href="#"><i class="social__icon" data-icon="icon-twitter"></i></a>
+                    </li>
+                    <li class="social__item"><a href="#"><i class="social__icon"
+                                data-icon="icon-instagram"></i></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 @endsection
