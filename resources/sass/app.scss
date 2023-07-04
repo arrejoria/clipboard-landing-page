@@ -43,7 +43,9 @@ p {
     color: $grayish-blue;
 }
 
-section {
+main,
+section,
+footer {
     margin-bottom: 70px;
     padding-top: 100px;
 }
@@ -53,17 +55,22 @@ h2,
 h3 {
     font-weight: $weight-secondary;
 }
+
+h2 {
+    font-size: 32px;
+}
 //### Download Section Styles
 
 .download__container {
     gap: 2.5rem;
 
     .download__text__content {
+        gap: 1.5rem;
         .download__title {
             font-weight: $weight-secondary;
         }
         .download__description {
-            padding: 1rem 2.4rem;
+            padding: 0 1.5rem;
         }
         .download__buttons {
             button {
@@ -71,8 +78,9 @@ h3 {
                 border-bottom: 3px solid rgba(0, 0, 0, 0.2);
                 border-radius: 2rem;
                 color: #fff;
-                padding: 0.5rem 2rem;
-
+                padding: 1rem 2rem;
+                width: 100%;
+                max-width: 17rem;
                 &:nth-child(1) {
                     background-color: $strong-cyan;
                     box-shadow: 0 2px 10px $strong-cyan,
@@ -81,6 +89,10 @@ h3 {
                 &:nth-child(2) {
                     background-color: $light-blue;
                     box-shadow: 0 2px 10px $light-blue, -11px -11px 10px #fdfdfd;
+                }
+
+                &:active {
+                    filter: brightness(110%);
                 }
             }
         }
@@ -131,9 +143,6 @@ h3 {
     margin-bottom: 100px;
     .workflow__text__content {
         gap: 1rem;
-        h2{
-        font-size: 2.4rem;
-        }
     }
 
     .workflow__items {
@@ -141,7 +150,7 @@ h3 {
         // grid-template-columns: repeat(3, 1fr);
         // width: 100%;
         .workflow__item {
-        padding: 0 2rem;
+            padding: 0 2rem;
             // display: grid;
             // grid-template-rows: 80px 50px 1fr;
             // padding: 0 20px;
@@ -175,37 +184,39 @@ h3 {
     }
     .swiper {
         width: 80vw;
-        height: 100px;
+        height: auto;
         margin-left: auto;
         margin-right: auto;
+
+        @media (max-width: 780px) {
+            height: 100%;
+            min-height: 400px;
+        }
     }
 }
 
 //### Footer Section Styles
 
 .footer__container {
-    background-color: $footer-bg;
     padding: 2.5rem 0;
     width: 100%;
     height: auto;
 
     .footer__content {
+        background-color: $footer-bg;
         margin: 0 auto;
         width: 100%;
-        // max-width: 80vw;
-
         display: flex;
 
-        .logo__section {
-            // flex: 2.5 1 3.8rem;
-        }
         .menu__section {
-            // flex: 5 0 27rem;
-            gap: 3rem;
             .menu__items {
                 .menu__item {
-                    margin-bottom: 1rem;
-
+                    :is(:hover){
+                        color: $strong-cyan;
+                    }
+                    &:first-child{
+                        margin-bottom: 1rem;
+                    }
                     a {
                         color: $dark-grayish-blue;
                         text-decoration: none;
@@ -215,23 +226,13 @@ h3 {
         }
 
         .social__section {
-            // flex: 1 1 11rem;
             .social__items {
                 .social__item {
-                    .social__icon {
-                        &:is(:hover){
+                    // :is(:hover){
+                    //     background-image: linear-gradient(0deg, $strong-cyan ,$strong-cyan);
+                    //     border: 2px solid red;
+                    // }
 
-                        }
-                        &::before {
-                            content: "";
-                            display: block;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            margin: 0.2rem;
-                            width: 24px;
-                            height: 24px;
-                        }
-                    }
                     .social__icon[data-icon="icon-facebook"]::before {
                         background-image: url("/public/images/icon-facebook.svg");
                     }
@@ -243,6 +244,22 @@ h3 {
                     .social__icon[data-icon="icon-instagram"]::before {
                         background-image: url("/public/images/icon-instagram.svg");
                     }
+                    .social__icon {
+                        &:hover {
+                            filter: hue-rotate(295deg) brightness(2) contrast(1) saturate(5)
+                        }
+                        &::before {
+                            content: "";
+                            display: block;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            margin: 0.2rem;
+                            width: 24px;
+                            height: 24px;
+
+
+                        }
+                    }
                 }
             }
         }
@@ -252,16 +269,16 @@ h3 {
 // Media Queries
 
 @media (min-width: 1440px) {
-    // // download Section
-    // .download__image__content {
-    //     img {
-    //         max-width: 10rem;
-    //     }
-    // }
-    // //Hero Section
-    // .hero__image__content {
-    //     img {
-    //         max-width: 50rem;
-    //     }
-    // }
+    // Download Section
+    .download__image__content {
+        img {
+            max-width: 10rem;
+        }
+    }
+    //Hero Section
+    .hero__image__content {
+        img {
+            max-width: 50rem;
+        }
+    }
 }
