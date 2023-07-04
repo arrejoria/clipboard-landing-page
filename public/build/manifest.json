@@ -1,0 +1,28 @@
+{
+  "public/images/bg-header-desktop.webp": {
+    "file": "assets/bg-header-desktop-58555073.webp",
+    "src": "public/images/bg-header-desktop.webp"
+  },
+  "public/images/icon-facebook.svg": {
+    "file": "assets/icon-facebook-304f87a1.svg",
+    "src": "public/images/icon-facebook.svg"
+  },
+  "public/images/icon-instagram.svg": {
+    "file": "assets/icon-instagram-309478ef.svg",
+    "src": "public/images/icon-instagram.svg"
+  },
+  "public/images/icon-twitter.svg": {
+    "file": "assets/icon-twitter-8ba3b4ec.svg",
+    "src": "public/images/icon-twitter.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-1e1b6820.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-44b47ba8.css",
+    "isEntry": true,
+    "src": "resources/sass/app.scss"
+  }
+}
